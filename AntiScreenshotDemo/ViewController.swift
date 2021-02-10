@@ -16,6 +16,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        setupScreenshotRemover()
+    }
+}
+
+// MARK: - screenshot removal
+extension ViewController {
+    fileprivate func setupScreenshotRemover() {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(onScreenshotTriggered),
@@ -27,10 +34,10 @@ class ViewController: UIViewController {
     @objc
     private func onScreenshotTriggered() {
         DispatchQueue.main.asyncAfter(deadline: .now() + secondsToAlert,
-                                      execute: deleteRecentScreenshot)
+                                      execute: removeRecentScreenshot)
     }
     
-    private func deleteRecentScreenshot() {
+    private func removeRecentScreenshot() {
         
         let fetchOptions = PHFetchOptions()
         fetchOptions.predicate = NSPredicate(
