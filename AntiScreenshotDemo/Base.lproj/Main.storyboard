@@ -26,7 +26,6 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chats" translatesAutoresizingMaskIntoConstraints="NO" id="sA6-G5-JeS">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="414" id="cSp-Kz-L79"/>
                                             <constraint firstAttribute="height" constant="300" id="r5t-wK-Yea"/>
                                         </constraints>
                                     </imageView>
